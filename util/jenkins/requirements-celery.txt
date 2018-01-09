@@ -1,4 +1,5 @@
 # Requirements for celery/redis monitoring script
+awscli==1.14.22
 redis==2.10.6
 click==6.7
 boto3==1.5.4
