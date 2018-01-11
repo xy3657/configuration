@@ -99,7 +99,7 @@ COMMON_ENABLE_NEWRELIC_APP: False
 COMMON_ENABLE_MINOS: False
 COMMON_TAG_EC2_INSTANCE: False
 common_boto_version: '2.34.0'
-common_node_version: '6.11.1'
+common_node_version: '8.9.3'
 common_redhat_pkgs:
   - ntp
   - lynx
@@ -157,7 +157,6 @@ common_debian_variants:
 
 # We only have to install old Python for these releases:
 old_python_ppa_releases:
-  - precise
   - trusty
 
 common_redhat_variants:
@@ -221,5 +220,7 @@ COMMON_JWT_AUDIENCE: 'SET-ME-PLEASE'
 COMMON_JWT_ISSUER: '{{ COMMON_OIDC_ISSUER }}'
 COMMON_JWT_SECRET_KEY: 'SET-ME-PLEASE'
 
-# Set sandbox admin default
-SANDBOX_CREATE_ADMIN_USER: True
+# Set worker user default
+CREATE_SERVICE_WORKER_USERS: True
+
+COMMON_ENABLE_AWS_ROLE: true
