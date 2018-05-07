@@ -212,6 +212,10 @@ ANALYTICS_API_NGINX_PORT: 80
 ANALYTICS_API_SSL_NGINX_PORT: 443
 ANALYTICS_API_VERSION: $analytics_api_version
 
+JOURNALS_NGINX_PORT: 80
+JOURNALS_SSL_NGINX_PORT: 443
+JOURNALS_VERSION: $journals_version
+
 VIDEO_PIPELINE_BASE_NGINX_PORT: 80
 VIDEO_PIPELINE_BASE_SSL_NGINX_PORT: 443
 
@@ -308,6 +312,14 @@ ECOMMERCE_LMS_URL_ROOT: "https://${deploy_host}"
 ECOMMERCE_SOCIAL_AUTH_REDIRECT_IS_HTTPS: true
 ecommerce_create_demo_data: true
 
+# NOTE: This is the same as DISCOVERY_URL_ROOT below
+JOURNALS_DISCOVERY_SERVICE_URL: "https://discovery-${deploy_host}"
+JOURNALS_JOURNALS_URL_ROOT: "https://journals-${deploy_host}"
+JOURNALS_LMS_URL_ROOT: "https://${deploy_host}"
+JOURNALS_SOCIAL_AUTH_REDIRECT_IS_HTTPS: true
+journals_create_demo_data: true
+
+
 DISCOVERY_URL_ROOT: "https://discovery-${deploy_host}"
 DISCOVERY_SOCIAL_AUTH_REDIRECT_IS_HTTPS: true
 
@@ -377,7 +389,7 @@ veda_encode_worker=${video_encode_worker:-false}
 video_pipeline_integration=${video_pipeline:-false}
 
 declare -A deploy
-plays="edxapp forum ecommerce credentials discovery analyticsapi veda_web_frontend veda_pipeline_worker veda_encode_worker video_pipeline_integration notifier xqueue xserver certs demo testcourses"
+plays="edxapp forum ecommerce credentials discovery journals analyticsapi veda_web_frontend veda_pipeline_worker veda_encode_worker video_pipeline_integration notifier xqueue xserver certs demo testcourses"
 
 for play in $plays; do
     deploy[$play]=${!play}
