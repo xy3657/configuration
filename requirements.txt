@@ -16,7 +16,7 @@ awscli==1.15.10
 requests==2.18.4
 datadog==0.8.0
 networkx==1.11
-pathlib2==2.3.0
+pathlib2==2.3.2
 boto3==1.7.14
 
 # Needed for the mongo_* modules (playbooks/library/mongo_*)
