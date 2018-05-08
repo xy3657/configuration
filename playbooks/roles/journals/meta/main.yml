@@ -30,7 +30,7 @@ dependencies:
     edx_django_service_django_settings_module: '{{ JOURNALS_DJANGO_SETTINGS_MODULE }}'
     edx_django_service_environment_extra: '{{ journals_environment }}'
     edx_django_service_gunicorn_extra: '{{ JOURNALS_GUNICORN_EXTRA }}'
-    edx_django_service_wsgi_name: 'course_journals'
+    edx_django_service_wsgi_name: 'journals'
     edx_django_service_nginx_port: '{{ JOURNALS_NGINX_PORT }}'
     edx_django_service_ssl_nginx_port: '{{ JOURNALS_SSL_NGINX_PORT }}'
     edx_django_service_language_code: '{{ JOURNALS_LANGUAGE_CODE }}'

@@ -1,4 +1,4 @@
-- name: Deploy edX Journals Service
+- name: Deploy edX Journals
   hosts: all
   become: True
   gather_facts: True
@@ -22,4 +22,3 @@
       when: COMMON_ENABLE_NEWRELIC_INFRASTRUCTURE
     - role: datadog-uninstall
       when: not COMMON_ENABLE_DATADOG
-
