@@ -50,3 +50,4 @@ dependencies:
     edx_django_service_session_expire_at_browser_close: '{{ JOURNALS_SESSION_EXPIRE_AT_BROWSER_CLOSE }}'
     edx_django_service_automated_users: '{{ JOURNALS_AUTOMATED_USERS }}'
     edx_django_service_use_python3: true
+    edx_django_service_post_migrate_commands: '{{ journals_post_migrate_commands }}'
