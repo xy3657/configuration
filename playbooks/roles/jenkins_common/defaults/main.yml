@@ -19,7 +19,7 @@ jenkins_common_debian_pkgs:
   - psmisc
 
 jenkins_common_configuration_git_url: https://github.com/edx/jenkins-configuration.git
-jenkins_common_jenkins_configuration_branch: master
+jenkins_common_jenkins_configuration_branch: origin/estute/TE-2539
 jenkins_common_configuration_src_path: src/main/groovy
 jenkins_common_git_home: '{{ jenkins_common_home }}/git'
 
@@ -113,6 +113,7 @@ JENKINS_GHPRB_SHARED_SECRET: ''
 JENKINS_GHPRB_BLACK_LIST: []
 JENKINS_GHPRB_WHITE_LIST: []
 JENKINS_MAIN_GITHUB_OWNER_WHITELIST: []
+JENKINS_GHPRB_BLACK_LIST_AUTHORS: ''
 
 # credentials
 JENKINS_SECRET_FILES_LIST: []
