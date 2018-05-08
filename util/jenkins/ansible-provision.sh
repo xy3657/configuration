@@ -314,11 +314,15 @@ ecommerce_create_demo_data: true
 
 # NOTE: This is the same as DISCOVERY_URL_ROOT below
 JOURNALS_DISCOVERY_SERVICE_URL: "https://discovery-${deploy_host}"
-JOURNALS_JOURNALS_URL_ROOT: "https://journals-${deploy_host}"
+JOURNALS_URL_ROOT: "https://journals-${deploy_host}"
 JOURNALS_LMS_URL_ROOT: "https://${deploy_host}"
 JOURNALS_SOCIAL_AUTH_REDIRECT_IS_HTTPS: true
+JOURNALS_DISCOVERY_API_URL: "{{ JOURNALS_DISCOVERY_SERVICE_URL }}/api/v1/"
+JOURNALS_DISCOVERY_JOURNALS_API_URL: "{{ JOURNALS_DISCOVERY_SERVICE_URL }}/journal/api/v1/"
+JOURNALS_ECOMMERCE_BASE_URL: "{{ ECOMMERCE_ECOMMERCE_URL_ROOT }}"
+JOURNALS_ECOMMERCE_API_URL: "{{ JOURNALS_ECOMMERCE_BASE_URL }}/api/v2/"
+JOURNALS_ECOMMERCE_JOURNALS_API_URL: "{{ JOURNALS_ECOMMERCE_BASE_URL }}/journal/api/v1"
 journals_create_demo_data: true
-
 
 DISCOVERY_URL_ROOT: "https://discovery-${deploy_host}"
 DISCOVERY_SOCIAL_AUTH_REDIRECT_IS_HTTPS: true
