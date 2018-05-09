@@ -1,0 +1,8 @@
+# Python dependencies for the aws role
+
+awscli==1.11.58
+boto==2.48.0
+s3cmd==1.6.1
+
+# pip-compile can't deal with this, it's added back by util/post-pip-compile.sh
+# https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz
